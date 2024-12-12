@@ -8,7 +8,9 @@ defmodule WeatherBackWeb.Router do
   scope "/api", WeatherBackWeb do
     pipe_through :api
 
-    get "/weather/:city", WeatherController, :get_weather
+    get "/weather", WeatherController, :index
+
+    # get "/weather/:city", WeatherController, :get_weather
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
